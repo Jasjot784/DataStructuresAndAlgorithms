@@ -14,7 +14,7 @@ long long int MaxPairwiseProduct(const vector<int> &v){
     if(v[j]>result2 && j!=max_index1 && v[j]<=result){
         max_index2 = i;
         result2 =
-    }return (v[max_index1]*v[max_index2]);
+    }}return (v[max_index1]*v[max_index2]);
 }
 
 int main(){
