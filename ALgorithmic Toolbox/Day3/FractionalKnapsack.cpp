@@ -1,7 +1,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-
+//PS-We need a faster algorithm as this is slow.The faster one is also done under practice section
 class knapsack{
   int w;
   int v;
