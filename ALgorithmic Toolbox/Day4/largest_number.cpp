@@ -1,34 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
-void swap(int &a,int &b){
-  int temp;
-  temp = a;
-  a = b;
-  b =temp;
-}
 int main(){
-  int n;
+  long long int n;
   cin>>n;
-  int x[n];
-  for(int i=0;i<n;++i)
+  long long int x[n];
+  for(long long int i=0;i<n;++i)
   cin>>x[i];
   sort(x,x+n);
 
-  for(int i =0;i<n;++i){
-    cout<<x[i]<<" ";
+  for(long long int i =0;i<n;++i){
+  //  cout<<x[i]<<" ";
   }
-  cout<<endl;
+  //cout<<endl;
 
-  int firstdigits[n];
-  int digitcount[n];
-  int y[n];
+  long long int firstdigits[n];
+  long long int digitcount[n];
+  long long int y[n];
 
-  for(int i=0;i<n;++i)
+  for(long long int i=0;i<n;++i)
   y[i]=x[i];
 
-  for(int i=0;i<n;++i){
-    int count =0;
-    int digit =0;
+  for(long long int i=0;i<n;++i){
+    long long int count =0;
+    long long int digit =0;
     while(y[i]>0){
       digit = y[i]%10;
       y[i]/=10;
@@ -37,19 +31,20 @@ int main(){
     digitcount[i] = count;
     firstdigits[i] = digit;
   }
-  for(int i =0;i<n;++i){
-    cout<<firstdigits[i]<<" ";
+  for(long long int i =0;i<n;++i){
+  //  cout<<firstdigits[i]<<" ";
   }cout<<endl;
-  for(int i =0;i<n;++i){
-    cout<<digitcount[i]<<" ";
-  }cout<<endl<<endl;
+  for(long long int i =0;i<n;++i){
+  //  cout<<digitcount[i]<<" ";
+}//cout<<endl<<endl;
 
-    int l =n;
-    int number =0;
+    long long int l =n;
+    long long int number =0;
+    
     while (l--) {
-      int index = max_element(firstdigits, firstdigits+n)-firstdigits;
+      long long int index = max_element(firstdigits, firstdigits+n)-firstdigits;
       number = (number*(pow(10,digitcount[index]))+x[index]);
-      cout<<number<<" ";
+      //cout<<number<<" ";
 
       //cout<<index<<" ";
       //cout<<x[index]<<" ";
@@ -67,5 +62,6 @@ int main(){
       //x.resize(l--);
 
     }
+    cout<<number<<endl;
 }
 //pta ni answer kyun ni a rea
